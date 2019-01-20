@@ -3,7 +3,7 @@ const url =
   "https://dnw-api.azurewebsite.net/api/v1/admin/link/newsletter-click";
 
 module.exports = function(context, req) {
-  const token = `Bearer ${os.environ["DNW_TOKEN"]}`;
+  const token = `Bearer ${process.env["DNW_TOKEN"]}`;
   if (!(req.body || !req.body.msys || !req.body.msys.track_event)) {
     context.res = {
       body: "No msys or track_event found"

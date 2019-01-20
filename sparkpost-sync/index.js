@@ -27,7 +27,7 @@ module.exports = function(context, myTimer) {
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json",
-          Authorization: ""
+          Authorization: process.env["SPARKPOST"]
         }
       }
     )

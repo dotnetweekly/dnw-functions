@@ -1,0 +1,19 @@
+{
+  "bindings": [
+    {
+      "name": "everyTuesday",
+      "type": "timerTrigger",
+      "direction": "in",
+      "schedule": "* * * * * 2"
+    },
+    {
+      "type": "documentDB",
+      "name": "dnwDocument",
+      "databaseName": "dnwdb",
+      "collectionName": "users",
+      "connection": "dotnetweekly_DOCUMENTDB",
+      "direction": "in"
+    }
+  ],
+  "disabled": false
+}
